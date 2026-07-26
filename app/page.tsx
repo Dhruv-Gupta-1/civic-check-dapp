@@ -35,9 +35,9 @@ export default function Home() {
   ]);
 
   const connectWallet = async () => {
-    if (typeof window !== 'undefined' && window.ethereum) {
+    if (typeof window !== 'undefined' && (window as any).ethereum) {
       try {
-        const provider = new ethers.BrowserProvider(window.ethereum);
+        const provider = new ethers.BrowserProvider((window as any).ethereum);
         const accounts = await provider.send('eth_requestAccounts', []);
         setAccount(accounts[0]);
       } catch (err) {
