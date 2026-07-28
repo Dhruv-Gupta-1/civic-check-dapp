@@ -13,7 +13,7 @@ interface SidebarProps {
   onSuggest: () => void;
 }
 
-export default function Sidebar({ activeTab, setActiveTab, account, connectWallet, onSuggest }: SidebarProps) {
+export function Sidebar({ activeTab, setActiveTab, account, connectWallet, onSuggest }: SidebarProps) {
   return (
     <header className="hidden md:flex flex-col w-20 xl:w-64 border-r border-gray-200 h-screen sticky top-0 bg-white">
       <div className="p-4 xl:p-6 flex-1 flex flex-col gap-2">
